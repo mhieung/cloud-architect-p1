@@ -1,0 +1,33 @@
+[ec2-user@ip-10-1-10-216 ~]$ sudo mysql --version
+mysql  Ver 8.0.33 for Linux on x86_64 (MySQL Community Server - GPL)
+[ec2-user@ip-10-1-10-216 ~]$ sudo mysql -h database-1.cb09dhw4rbml.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 28
+Server version: 8.0.32 Source distribution
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE udacity
+Database changed
+mysql> CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> INSERT INTO users (id, name) VALUES (1, 'John');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM users;
++----+------+
+| id | name |
++----+------+
+|  1 | John |
++----+------+
+1 row in set (0.00 sec)
+
+mysql> 

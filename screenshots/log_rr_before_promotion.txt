@@ -1,0 +1,10 @@
+mysql>  SHOW TABLES;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO users (id, name) VALUES (2, 'Jane');
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement

@@ -1,0 +1,5 @@
+Here are the achievable objectives in terms of RTO and RPO:
+
+RPO is 0 because for a single AZ, the minimum RTO would typically be within minutes thanks to the automatic failover to the standby replica in another AZ within the same region which helps keep downtime to a minimal and business runs smoothly.
+
+Minimum RTO, which is how long it takes to to promote the replica, for a single region outage is 5 minutes.By default, Amazon RDS supports asynchronous replication for read replicas across regions, so RPO would be roughly 10 minutes.
